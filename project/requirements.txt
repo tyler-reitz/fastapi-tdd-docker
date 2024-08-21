@@ -1,8 +1,13 @@
 aerich==0.7.2
 asyncpg==0.29.0
+black==23.12.1
 fastapi==0.109.0
+flake8==7.0.0
+gunicorn==21.0.1
 httpx==0.26.0
-pytest==7.4.4
+isort==5.13.2
 pydantic-settings==2.1.0
+pytest==7.4.4
+pytest-cov==4.1.0
 tortoise-orm==0.20.0
 uvicorn==0.26.0

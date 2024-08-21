@@ -1,4 +1,8 @@
-env
+.coverage
 .dockerignore
+
 Dockerfile
 Dockerfile.prod
+
+env
+htmlcov
