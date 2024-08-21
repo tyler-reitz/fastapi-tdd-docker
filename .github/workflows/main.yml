@@ -64,7 +64,7 @@ jobs:
           docker run \
             -d \
             --name fastapi-tdd \
-            -e PORT=8765
+            -e PORT=8765 \
             -e ENVIRONMENT=dev \
             -e DATABASE_URL=sqlite://sqlite.db \
             -e DATABSSE_TEST_URL=sqlite://sqlite.db \
