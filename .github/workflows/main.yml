@@ -103,7 +103,7 @@ jobs:
         run: |
           docker build \
             --cache-from ${{ env.IMAGE }}:latest \
-            --tag ${{ env.HEROKU_REGISTRY_NAME }}:latest \
+            --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest \
             --file ./project/Dockerfile.prod \
             "./project"
       - name: Log into the Heroku Container Registry
