@@ -3,8 +3,8 @@ from typing import List
 from fastapi import APIRouter, HTTPException, Path
 
 from app.api import crud
-from app.models.pydantic import SummaryPayloadSchema  # isort skip
-from app.models.pydantic import (SummaryResponseSchema,
+from app.models.pydantic import (SummaryPayloadSchema,  # isort skip
+                                 SummaryResponseSchema,
                                  SummaryUpdatePayloadSchema)
 from app.models.tortoise import SummarySchema
 
