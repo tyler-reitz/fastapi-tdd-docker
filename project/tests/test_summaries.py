@@ -208,7 +208,7 @@ def test_update_summary_invalid(
 
 def test_update_summary_invalid_keys(test_app_with_db):
     response = test_app_with_db.put(
-        f"/summaries/1/", data=json.dumps({"url": "invalid://url", "text": "updated!"})
+        "/summaries/1/", data=json.dumps({"url": "invalid://url", "text": "updated!"})
     )
     assert response.status_code == 422
     assert (
