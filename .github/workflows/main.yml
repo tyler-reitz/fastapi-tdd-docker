@@ -29,7 +29,7 @@ jobs:
       - name: Build images
         run: |
           docker build \
-            --target builder
+            --target builder \
             --cache-from ${{ env.IMAGE }}-builder:latest \
             --tag ${{ env.IMAGE }}-builder:latest \
             --file ./project/Dockerfile.prod \
@@ -120,7 +120,7 @@ jobs:
       - name: Build Image
         run: |
           docker build \
-            --target builder
+            --target builder \
             --cache-from ${{ env.IMAGE }}-builder:latest \
             --tag ${{ env.HEROKU_REGISTRY_IMAGE }}-builder:latest \
             --file ./project/Dockerfile.prod \
