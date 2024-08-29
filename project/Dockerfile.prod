@@ -32,7 +32,6 @@ RUN mkdir -p /home/app
 RUN addgroup --system app && adduser --system --group app
 
 ENV HOME=/home/app
-RUN mkdir $HOME
 WORKDIR $HOME
 
 ENV PYTHONDONTWRITEBYTECODE 1
