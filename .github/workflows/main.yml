@@ -87,7 +87,8 @@ jobs:
             ${{ env.IMAGE }}-final:latest
       - name: Inspect env
         run: |
-          whoami && ls -la /home/app/
+          docker exec fastapi-tdd whoami
+          docker exec ls -la /home/app/
       - name: Install requirements
         run: docker exec fastapi-tdd pip install --user black==23.12.1 flake8==7.0.0 isort==5.13.2 pytest==7.4.4
       - name: Pytest
