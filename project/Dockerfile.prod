@@ -54,6 +54,7 @@ RUN pip install "uvicorn[standard]==0.26.0"
 COPY . .
 
 RUN chown -R app:app $APP_HOME
+RUN chown -R app:app $APP_HOME/.local
 
 USER app
 
