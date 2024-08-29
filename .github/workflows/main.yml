@@ -126,8 +126,8 @@ jobs:
             --file ./project/Dockerfile.prod \
             "./project"
           docker build \
-            --cache-from ${{ env.IMAGE }}-final:latest \
-            --tag ${{ env.HEROKU_REGISTRY_IMAGE }}-final:latest \
+            --cache-from ${{ env.IMAGE }}:latest \
+            --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest \
             --file ./project/Dockerfile.prod \
             "./project"
       - name: Log into the Heroku Container Registry
