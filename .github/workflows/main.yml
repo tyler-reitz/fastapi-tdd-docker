@@ -90,7 +90,7 @@ jobs:
       - name: Pytest
         run: docker exec fastapi-tdd python -m pytest .
       - name: Flake8
-        run: docker exec fastapi-tdd python -m flake8 --exclude .local .
+        run: docker exec fastapi-tdd python -m flake8 .
       - name: Black
         run: docker exec fastapi-tdd python -m black . --check
       - name: isort
