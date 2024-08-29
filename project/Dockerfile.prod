@@ -34,6 +34,7 @@ RUN addgroup --system app && adduser --system --group app
 ENV HOME=/home/app
 ENV APP_HOME=/home/app/web
 RUN mkdir $APP_HOME
+RUN mkdir $APP_HOME/.local
 WORKDIR $APP_HOME
 
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -54,7 +55,7 @@ RUN pip install "uvicorn[standard]==0.26.0"
 COPY . .
 
 RUN chown -R app:app $APP_HOME
-RUN chown -R app:app $APP_HOME
+RUN chown -R app:app $APP_HOME/.local
 
 USER app
 
